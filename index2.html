@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    Email: <input type="email" id="email" onchange="uppercase()">
+
+    <hr style="padding: 10px; border: 0px;">
+  
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color: red; color: white; padding: 40px; height: 20px ;width: 100px;">
+        click me
+    </div>
+
+    <hr style="padding: 10px; border: 0px;">
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" 
+    style="background-color: green; color: white; padding: 40px; height: 20px ;width: 100px;">
+    Events
+    </div>
+
+    <script>
+        function uppercase(){
+            var elem = document.getElementById("email");
+            elem.value = elem.value.toUpperCase();
+        }
+
+        function mOver(object){
+            object.innerHTML = "Mouse over me ";
+            object.style.backgroundColor = "green"
+        }
+        function mOut(object){
+             object.innerHTML = "click me" ;
+            object.style.backgroundColor = "red"
+        }
+
+        function mUp(object){
+            object.style.background = "blue";
+            object.innerHTML = "Mouse Event";
+        }
+    </script>
+</body>
+</html>
